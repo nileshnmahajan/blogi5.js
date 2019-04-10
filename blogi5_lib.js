@@ -1,23 +1,8 @@
 var tost_timer;
-
+var site_title='your site title';
 function change_url(url)
 {
-	try
-	{
-            h_title('BLOGi5 ek blog site');
-            title("BLOGi5");
-		window.scrollByPages(-100);
-	}
-	catch(e)
-	{ 
-		try
-		{
-			window.scroll(0,0);	
-		}catch(e)
-		{
-			 
-		}
-	}
+
     /* it change url without refresh or click */
     loading();
 	try
@@ -35,7 +20,7 @@ function urlsplit()
     var a=window.location.pathname;
     a=a.replace('/index.html','');/*local*/
     a=a.replace(/%20/g,' ');
-    a=a.split('/');/*["",post,id,name]["",auther,id,..,..]*/
+    a=a.split('/');
     var b=new Array;
     for(var i=0;i<(a.length-1);i++)
     {
@@ -94,6 +79,7 @@ function hide_tost()
 }
 function tost(data="hey buddy not getting anythinh :)",time=2,color="#666")
 {
+	//this function shows a simple tost at right bottom corner with passed values or with formal parameters values
     try
     {
         clearTimeout(tost_timer);
@@ -156,7 +142,7 @@ function new_class_div(Class,Where,data='')
 
 function new_div_class(Class,Where,data='')
 {
-    /*repeted ned deelete wfter checking depedancys */
+    /*repeted ned delete wfter checking depedancys */
        /* simple new div and asign class */
 	var temp=document.createElement("div");
 	temp.setAttribute('class', Class);
@@ -206,7 +192,6 @@ function new_input(id,Type,placeholder,dflt_value,Where)
 
 
 
-/*return value of input*/
 function valueof(id)
 {
     /*return value of input which id give*/
